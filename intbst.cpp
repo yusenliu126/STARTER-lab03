@@ -1,6 +1,6 @@
 // intbst.cpp
 // Implements class IntBST
-// YOUR NAME(S), DATE
+// Yusen Liu, January 30, 2026
 
 #include "intbst.h"
 
@@ -65,7 +65,6 @@ bool IntBST::insert(int value, Node *n) {
 void IntBST::printPreOrder() const {
     if (root) {
         printPreOrder(root); 
-        cout << endl;
     }
 }
 
@@ -85,7 +84,7 @@ void IntBST::printPreOrder(Node *n) const {
 void IntBST::printInOrder() const {
     if (root) {
         printInOrder(root); 
-        cout << endl;
+        
     }
 }
 void IntBST::printInOrder(Node *n) const {
@@ -102,7 +101,7 @@ void IntBST::printInOrder(Node *n) const {
 void IntBST::printPostOrder() const {
     if (root) {
         printPostOrder(root); 
-        cout << endl;
+        
     }
 }
 
