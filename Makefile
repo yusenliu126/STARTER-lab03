@@ -12,7 +12,17 @@ intbst.o: intbst.cpp intbst.h
 testbst.o: testbst.cpp intbst.h
 	$(CXX) $(CXXFLAGS) -c testbst.cpp
 
+test_intbst: test_intbst.o intbst.o
+	$(CXX) test_intbst.o intbst.o -o test_intbst
+
+test_intbst.o: test_intbst.cpp intbst.h
+	$(CXX) $(CXXFLAGS) -c test_intbst.cpp
+
+.PHONY: test_intbst
+
 clean:
 	rm -f $(OBJECTS) $(EXECUTABLE)
 
-.PHONY: clean
+all: bst test_intbst
+
+.PHONY: all
